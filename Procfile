@@ -1,1 +1,1 @@
-worker : python telegrambot_led
+worker : python telegrambot_led.py
