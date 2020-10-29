@@ -3,11 +3,11 @@ from Adafruit_IO import Client, Feed,Data #import libraries for adafruit
 import requests #for getting data from cloud
 import os #operating system
 
-x = os.getenv('ADAFRUIT_IO_USERNAME')  #adafruit username and password should be given as 'Config Vars' in the settings of your app on Heroku 
-y = os.getenv('ADAFRUIT_IO_KEY') 
+ADAFRUIT_IO_USERNAME = os.getenv('ADAFRUIT_IO_USERNAME')  #adafruit username and password should be given as 'Config Vars' in the settings of your app on Heroku 
+ADAFRUIT_IO_KEY = os.getenv('ADAFRUIT_IO_KEY') 
 #these keys are from adafruit .io
 
-aio = Client(x,y) # create instance of REST client
+aio = Client(ADAFRUIT_IO_USERNAME,ADAFRUIT_IO_KEY) # create instance of REST client
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN') #token is generate from telebot
 
 # Create Feed object with name 'projectbot'.
